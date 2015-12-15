@@ -3,7 +3,7 @@ int ldr = A0;
 int ldr_value = 0;
 boolean estado = false;
 const int medio = 150; //valor de transicao para estado do rele
-const int temp = 0; //tempo que o rele ficara acionado
+const int temp = 5; //tempo que o rele ficara acionado
 int aux_temp = -1; //variavel auxiliar para decrementar tempo
 int old_value = 0;
 /*
@@ -46,8 +46,8 @@ void loop() {
   if ((estado)&&(aux_temp > 0)) {
     aux_temp--;
     delay(1000);
+    Serial.println(aux_temp);
   } else if ((estado)&&(aux_temp == 0)) {
     digitalWrite(Rele, LOW);
-    estado = false;
   }
 }
