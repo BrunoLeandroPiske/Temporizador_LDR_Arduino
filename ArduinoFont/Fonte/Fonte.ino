@@ -2,7 +2,9 @@ int Rele = 2;
 int ldr = A0;
 int ldr_value = 0;
 boolean estado = false;
-const int medio = 150;
+const int medio = 150; //valor de transicao para estado do rele
+const int temp = 0; //tempo que o rele ficara acionado
+int aux_temp = -1; //variavel auxiliar para decrementar tempo
 int old_value = 0;
 /*
  * 1023 valor maximo do LDR
@@ -24,10 +26,28 @@ void loop() {
     estado = false;
     delay(2000);
   } else if ((ldr_value < medio)&&!(estado)) {
-    Serial.println("Mudar de estado para ON");
-    digitalWrite(Rele, HIGH);
-    old_value = ldr_value;
-    estado = true;
-    delay(2000);
+    if (temp > 0) {
+      Serial.println("Mudar de estado para ON");
+      digitalWrite(Rele, HIGH);
+      old_value = ldr_value;
+      aux_temp = temp;
+      estado = true;
+      delay(2000);
+    } else if (temp == -1) {
+      Serial.println("Mudar de estado para ON");
+      digitalWrite(Rele, HIGH);
+      old_value = ldr_value;
+      aux_temp = temp;
+      estado = true;
+      delay(2000);
+    }
+  }
+  
+  if ((estado)&&(aux_temp > 0)) {
+    aux_temp--;
+    delay(1000);
+  } else if ((estado)&&(aux_temp == 0)) {
+    digitalWrite(Rele, LOW);
+    estado = false;
   }
 }
