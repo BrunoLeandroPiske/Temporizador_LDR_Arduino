@@ -1,4 +1,4 @@
-update=12/12/2015 21:36:38
+update=15/12/2015 12:52:25
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,3 +61,13 @@ LibName29=contrib
 LibName30=C:/Users/Bruno/Documents/kicad-library-master/capteurs
 LibName31=valves
 LibName32=relays
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
