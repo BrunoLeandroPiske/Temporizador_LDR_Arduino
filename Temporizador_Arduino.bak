@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Temporizador_Arduino-rescue
 LIBS:Connector
 LIBS:power
 LIBS:device
@@ -84,7 +85,7 @@ L R R3
 U 1 1 5668BAF8
 P 1900 1800
 F 0 "R3" V 1980 1800 50  0000 C CNN
-F 1 "4.7K" V 1900 1800 50  0000 C CNN
+F 1 "1K5" V 1900 1800 50  0000 C CNN
 F 2 "rc-master:rc-master-0204%2f5" V 1830 1800 30  0001 C CNN
 F 3 "" H 1900 1800 30  0000 C CNN
 	1    1900 1800
@@ -182,7 +183,6 @@ Wire Wire Line
 	1600 1450 4300 1450
 Wire Wire Line
 	1600 1450 1600 900 
-Connection ~ 1600 900 
 Wire Wire Line
 	1600 1550 4300 1550
 Wire Wire Line
@@ -202,7 +202,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 1650 4300 1650
 $Comp
-L Connector CONN1
+L Connector-RESCUE-Temporizador_Arduino CONN1
 U 1 1 566CDDE4
 P 4700 1100
 F 0 "CONN1" H 4650 300 60  0000 C CNN

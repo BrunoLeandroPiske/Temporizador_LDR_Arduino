@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Temporizador_Arduino-rescue
 LIBS:Connector
 LIBS:power
 LIBS:device
@@ -118,7 +119,7 @@ L Led_Small D1
 U 1 1 566A9586
 P 1600 2450
 F 0 "D1" H 1550 2575 50  0000 L CNN
-F 1 "LED Green" H 1425 2350 50  0000 L CNN
+F 1 "LED Verde" H 1425 2350 50  0000 L CNN
 F 2 "led:led-LED3MM" V 1600 2450 60  0001 C CNN
 F 3 "" V 1600 2450 60  0000 C CNN
 	1    1600 2450
@@ -201,7 +202,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 1650 4300 1650
 $Comp
-L Connector CONN1
+L Connector-RESCUE-Temporizador_Arduino CONN1
 U 1 1 566CDDE4
 P 4700 1100
 F 0 "CONN1" H 4650 300 60  0000 C CNN

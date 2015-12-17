@@ -1,19 +1,19 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
-# Connector
+# Connector-RESCUE-Temporizador_Arduino
 #
-DEF Connector CONN 0 40 Y Y 1 F N
+DEF Connector-RESCUE-Temporizador_Arduino CONN 0 40 Y Y 1 F N
 F0 "CONN" -50 -800 60 H V C CNN
-F1 "Connector" -50 0 60 H V C CNN
+F1 "Connector-RESCUE-Temporizador_Arduino" -50 0 60 H V C CNN
 F2 "" -50 0 60 H V C CNN
 F3 "" -50 0 60 H V C CNN
 DRAW
 S -300 -50 200 -750 0 1 0 N
 X 5V 1 400 -150 200 L 50 50 1 1 O
 X GND 2 400 -250 200 L 50 50 1 1 O
-X PIN0 3 400 -350 200 L 50 50 1 1 B
-X PIN1 4 400 -450 200 L 50 50 1 1 B
+X A0 3 400 -350 200 L 50 50 1 1 B
+X PIN2 4 400 -450 200 L 50 50 1 1 B
 X 220V 5 400 -550 200 L 50 50 1 1 O
 X OUTPUT 7 400 -650 200 L 50 50 1 1 O
 ENDDRAW
