@@ -25,20 +25,20 @@ void setup() {
 void loop() {
   ldr_value = analogRead(ldr);
   if ((ldr_value >= medio)&&(estado)) {
-    Serial.println("Mudar de estado para OFF");
+    Serial.println("Mudar estado para OFF");
     digitalWrite(Rele, LOW);
     old_value = ldr_value;
     estado = false;
   } else if ((ldr_value < medio)&&!(estado)) {
     if (temp > 0) {
-      Serial.println("Mudar de estado para ON");
+      Serial.println("Mudar estado para ON");
       digitalWrite(Rele, HIGH);
       old_value = ldr_value;
       aux_temp = temp;
       estado = true;
       delay(2000);
     } else if (temp == -1) {
-      Serial.println("Mudar de estado para ON");
+      Serial.println("Mudar estado para ON");
       digitalWrite(Rele, HIGH);
       old_value = ldr_value;
       aux_temp = temp;
@@ -51,7 +51,7 @@ void loop() {
   if ((estado)&&(aux_temp == 0)) {
     digitalWrite(Rele, LOW);
   } else  if ((estado)&&(aux_temp > 0)&&(ldr_value >= medio)) {
-    Serial.println("Mudar de estado para OFF");
+    Serial.println("Mudar estado para OFF");
     digitalWrite(Rele, LOW);
     old_value = ldr_value;
     estado = false;
